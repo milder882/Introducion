@@ -1,3 +1,24 @@
-{{post.title}}
-<br>
-{{post.content}}
+{% extends 'base.html' %}
+{% block title %}CreateBlog{% endblock title %}
+
+
+{% block content %}
+<div class="bg-white max-w-full dark:bg-dark-second shadow px-4 py-5 sm:rounded-lg sm:p-6">
+    <div class="bg-white dark:bg-dark-third max-w-full px-4 py-5 border-b rounded-lg mb-2 dark:border-dark-second border-gray-200 sm:px-6">
+        <h2 class="text-xl leading-6 cursor-default dark:text-dark-txt prose rounded font-bold text-gray-900">
+        Detail Post
+        </h2>
+        <br>
+        <label for="first name" class="block text-sm font-medium dark:text-dark-txt text-gray-700">
+        Title
+        </label>
+        <p class="mt-1 text-sm cursor-default dark:text-dark-txt text-gray-500">{{post.title}}</p>
+        <br>
+        <label for="first name" class="block text-sm font-medium dark:text-dark-txt text-gray-700">
+        Content
+        </label>
+        <p class="mt-1 text-sm cursor-default dark:text-dark-txt text-gray-500">{{post.content}}</p>
+        <br>
+        <a class="inline-flex items-center px-2.5 py-1.5 border bordindigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{% url 'blog:home' %}">Return</a>
+        
+{% endblock content %}

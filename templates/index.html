@@ -1,3 +1,15 @@
 {% extends 'base.html' %}
+{% block title %}Homepage{% endblock title %}
 
-{% block content %}hola, visita mi <a class="text-blue-500" href="{% url 'blog:home' %}"> blog aqqui</a>{% endblock content %}
+{% block content %}
+<div class="bg-white max-w-full dark:bg-dark-second shadow px-4 py-5 sm:rounded-lg sm:p-6">
+    <div class="bg-white dark:bg-dark-third max-w-full px-4 py-5 border-b rounded-lg mb-2 dark:border-dark-second border-gray-200 sm:px-6">
+        <h1 class="text-xl leading-6 cursor-default dark:text-dark-txt prose rounded font-bold text-gray-900">
+        Blog
+        </h1>
+            <p class="mt-1 text-sm cursor-default dark:text-dark-txt text-gray-500">hola, visita mi</p>
+            <a class="items-center justify-center  rounded-full hover:bg-gray-200 dark:hover:bg-dark-third text-blue-500 p1" href="{% url 'blog:home' %}"> blog aqui.</a>
+    </div>
+</div>
+
+{% endblock content %}
